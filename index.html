@@ -4,6 +4,10 @@
         <title>My Cool Website</title>
 
         <style>
+            button {
+                
+
+            }
             img {
                 width: 600px;
                 height: auto;
@@ -18,5 +22,33 @@
         <h1>My Cool Website</h1>
         <p>I made this cool website</p>
         <img src=https://www.masala.com/cloud/2021/07/28/8DKbhQ8H-SmudgeCat.jpg.jpg />
+
+        <blockquote>"It's over, Anakin! I have the high ground!" <br>
+            -Smudge the Cat
+        </blockquote>
+        <button onclick="changeQuote()">Continue</button>
+
+        <script>
+            var index = 0;
+
+            function changeQuote() {
+                var quotes =  [
+                    `"It's over, Evil Smudge the Cat! I have the high ground!" <br> -Smudge the Cat`,
+                    `"You underestimate my power!" <br> - Evil Smudge the Cat`,
+                    `"Don't try it" <br> - Smudge the Cat`,
+                    `Evil Smudge the Cat attacks Smudge the cat but Smudge cuts offs Evil Smudge's limbs and lets him burn`,
+                    `"Etc, I'm running out of time" <br> - Joel`,
+                    `"I need more coffee" <br> - Victor`
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+                
+                index++;
+                if (index >= quotes.length) {
+                    index = 0;
+                }
+            }
+        </script>
     </body>
 </html>
